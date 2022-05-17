@@ -6,7 +6,8 @@ def extract_tiles(wsi_files, geo_files, path_to_save, tile_size = 256):
     geo_files (list) - list of paths to GeoJson files
     path_to_save (str) - path to the folder where the images will be saved. IMPORTANT : it should contain folders named after classes (main folder ---> class1 -->
                                                                                                                                                         class2 -->
-                                                                                                                                                        class3 --> """
+                                                                                                                                                        class3 -->
+     tile_size (int) - size in pixels of the output image"""
     
     import openslide  # Can i import libraries in function ?
     import geojson
