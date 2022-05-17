@@ -1,15 +1,30 @@
 def extract_tiles(wsi_files, geo_files, path_to_save, tile_size = 256):
-    # Написать описание функции
+    """ Extract images (256x256)  from slides to directory in jpeg format
+    ----------------------------------------------------------------
+    Parameters:
+    wsi_files (list) - list of paths to WSI slides
+    geo_files (list) - list of paths to GeoJson files
+    path_to_save (str) - path to the folder where the images will be saved. IMPORTANT : it should contain folders named after classes (main folder ---> class1 -->
+                                                                                                                                                        class2 -->
+                                                                                                                                                        class3 --> """
     
-    import openslide
+    import openslide  # Can i import libraries in function ?
     import geojson
     import os, platform
     
     files_count = len(wsi_files) # number of slides to process
     zip_dir = zip(wsi_files, geo_files)
     
-    def extract_tiles (slide_path, geojson_path, path_to_save):
-        # Написать описание функци        
+    def extract_images_from_slide (slide_path, geojson_path, path_to_save):
+        """ Extract images from one WSI, using coordinates from GeoJson (Pretty Json) file
+        -----------------------------------------------------------------------------
+        Parameters:
+        slide_path (str) - path to WSI slide
+        geojson_path (str) - path to json file
+        path_to_save (str) - path to the folder where the images will be saved. IMPORTANT : it should contain folders named after classes (main folder ---> class1 -->
+                                                                                                                                                            class2 -->
+                                                                                                                                                            class3 -->
+        """      
 
         # open slide from directory
         slide = openslide.OpenSlide(slide_path)
@@ -42,14 +57,19 @@ def extract_tiles(wsi_files, geo_files, path_to_save, tile_size = 256):
         slide_path = directory[0]
         geojson_path = directory[1]
         print('Now processing: '+ slide_path)
-        extract_tiles(slide_path, geojson_path, path_to_save )
+        extract_images_from_slide(slide_path, geojson_path, path_to_save )
         print()
         counter+=1
         print('Remain slides : ' + str(files_count - counter))
     print('Complete!')
 
 def get_files_from_dir (dir_path):
-    # ОПИСАНИЕ!!!!
+    """ Return list of files (filepath) in directory 
+    ------------------------------------------------
+    Parameters : 
+    dir_path(str) - path to directory in string format
+    
+    Output : files - list of pathes"""
     from os import listdir
     files = list()
     for file in listdir(dir_path):
