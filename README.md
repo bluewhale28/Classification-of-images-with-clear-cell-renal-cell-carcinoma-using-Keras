@@ -17,15 +17,15 @@ For the project, I chose a collection of slides of histological images stained w
 I annotated WSI by myself , using QuPath 0.3.2.
 Initially, I defined 5 classes :
 
- 1)Blood
+1.Blood
 
-2) Clear cell renal cell carcinoma(CCRCC)
+2.Clear cell renal cell carcinoma(CCRCC)
 
-3) Fat
+3.Fat
 
-4) Kidney
+4.Kidney
 
-5) Stroma. It is a connective tissue that is not a specific element and can occur in both normal tissue and tumor. This also includes the walls of vessels, etc.
+5.Stroma. It is a connective tissue that is not a specific element and can occur in both normal tissue and tumor. This also includes the walls of vessels, etc.
 
 ![classes](https://user-images.githubusercontent.com/55003096/172024831-499a6eb4-7cd5-4423-86f1-81bad5325409.png)
 
