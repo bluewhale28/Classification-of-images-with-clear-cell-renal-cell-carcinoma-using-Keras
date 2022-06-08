@@ -15,6 +15,7 @@ For the project, I chose a collection of slides of histological images stained w
 
 ## WSI annotations
 I annotated WSI by myself , using QuPath 0.3.2.
+
 Initially, I defined 5 classes :
 
 1.Blood
