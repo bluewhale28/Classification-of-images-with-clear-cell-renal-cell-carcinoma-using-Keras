@@ -1,4 +1,4 @@
-# Classification-of-images-with-Clear-cell-renal-cell-carcinoma-using-Keras
+# Classification of images with Clear cell renal cell carcinoma using Keras
 My own project for classification of histological images with clear cell renal cell carcinoma.
 
 ![main](https://user-images.githubusercontent.com/55003096/172024737-cc26f37b-e8d8-4bf0-9036-2ff3b1426806.png)
